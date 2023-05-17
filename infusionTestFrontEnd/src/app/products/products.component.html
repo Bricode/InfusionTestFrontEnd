@@ -1,0 +1,11 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+    <div id="productBubble">
+        <h3>{{product.name}}</h3>
+        <p>{{product.sku}}</p>
+        <p>{{product.description}}</p>
+        <p>{{product.price}}</p>
+        <button>Add to Cart</button>
+    </div>
+</div>
