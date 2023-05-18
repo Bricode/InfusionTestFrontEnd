@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { CartComponent } from './cart/cart.component';
-import { OrdersComponent } from './orders/orders.component';
-import { OrderDetailsComponent } from './order-details/order-details.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CartComponent } from './components/cart/cart.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -26,6 +26,8 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -56,9 +58,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Product } from './product';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductsService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   url = 'http://localhost:3000/products';
 
-  async getAllProducts(): Promise<Product[]> {
-    const data = await fetch(this.url);
-    return await data.json() ?? [];
-  }
+  getAllProducts() {
+    return this.http.get<Product[]>(this.url);
+  }   
 }

@@ -1,13 +1,13 @@
 <div class="container-fluid">
     <h2>Products</h2>
     <div class="row">
-        <div *ngFor="let product of productsList" class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <div id="productBubble" class="card mb-4">
+        <div *ngFor="let product of productsList" class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+            <div id="productBubble" class="card mb-3">
                 <div class="card-header"><h3>{{product.name}}</h3></div>
                 <div class="card-body">
-                    <p>{{product.sku}}</p>
-                    <p>{{product.description}}</p>
-                    <p>{{product.price}}</p>
+                    <p>Sku: {{product.sku}}</p>
+                    <p>Description: {{product.description}}</p>
+                    <p>Price: {{product.price}}</p>
                     <button>Add to Cart</button>
                 </div>
             </div>
