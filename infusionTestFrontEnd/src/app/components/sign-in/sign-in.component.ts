@@ -25,11 +25,16 @@ export class SignInComponent {
     var enteredPassword = this.signInForm.value.password;
 
     this.loginService.login(enteredUsername, enteredPassword).subscribe(res =>{
+      var success = false;
       const user = res.find((a:any) => {
-        return a.username === enteredUsername && a.password === enteredPassword
+        if (a.username === enteredUsername && a.password === enteredPassword) {
+          success = true;
+          return a
+        }
       })
-      if (user) {
+      if (success) {
         console.log("Signed in");
+        this.loginService.setSignedInUser(user);
         this.router.navigateByUrl('/products');
       } else {
         alert("Login failed");
