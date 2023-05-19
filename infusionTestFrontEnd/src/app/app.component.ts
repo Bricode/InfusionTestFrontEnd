@@ -11,11 +11,13 @@ import { Router } from '@angular/router';
 export class AppComponent {  
   title = 'infusionTestFrontEnd';
   userIsSignedIn = this.userAuthServ.isUserSignedIn()
-  
+  userIsCustomer = !this.userAuthServ.isAdmin();
+
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event.constructor.name === "NavigationEnd") {
         this.userIsSignedIn = this.userAuthServ.isUserSignedIn();
+        this.userIsCustomer = !this.userAuthServ.isAdmin();
       }
     })
   }
