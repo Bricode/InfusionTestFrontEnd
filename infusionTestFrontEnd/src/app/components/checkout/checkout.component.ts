@@ -8,6 +8,7 @@ import { Cart } from '../../cart';
 })
 export class CheckoutComponent {
   cart: Cart = {
+    customerId: 1,
     products: [{
       sku: 1,
       name: 'test',

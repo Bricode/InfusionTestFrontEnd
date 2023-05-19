@@ -1,39 +1,42 @@
 {
-    "products" : [
-        {
-            "sku": 1,
-            "name": "test",
-            "description": "test Description",
-            "price": 19.99
-          },{
-            "sku": 2,
-            "name": "test 2",
-            "description": "test Description 2",
-            "price": 20.99
-          },{
-            "sku": 3,
-            "name": "test 2",
-            "description": "test Description 2",
-            "price": 20.99
-          },{
-            "sku": 4,
-            "name": "test 2",
-            "description": "test Description 2",
-            "price": 20.99
-          }
-    ],
-    "user" : [
-        {
-            "id" : 1,
-            "username" : "customer1",            
-            "password" : "customer",
-            "accountType" : "customer"
-        },
-        {
-            "id" : 2,
-            "username" : "admin",            
-            "password" : "admin",
-            "accountType" : "admin"
-        }
-    ]
+  "products": [
+    {
+      "sku": 1,
+      "name": "test",
+      "description": "test Description",
+      "price": 19.99
+    },
+    {
+      "sku": 2,
+      "name": "test 2",
+      "description": "test Description 2",
+      "price": 20.99
+    },
+    {
+      "sku": 3,
+      "name": "test 2",
+      "description": "test Description 2",
+      "price": 20.99
+    },
+    {
+      "sku": 4,
+      "name": "test 2",
+      "description": "test Description 2",
+      "price": 20.99
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "customer1",
+      "password": "customer",
+      "accountType": "customer"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "admin",
+      "accountType": "admin"
+    }    
+  ]
 }

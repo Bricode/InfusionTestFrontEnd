@@ -19,15 +19,21 @@ export class SignInComponent {
     password: ''
   });
 
+
   onSubmit(): void {
-    this.loginService.login().subscribe(res =>{
+    var enteredUsername = this.signInForm.value.username;
+    var enteredPassword = this.signInForm.value.password;
+
+    this.loginService.login(enteredUsername, enteredPassword).subscribe(res =>{
       const user = res.find((a:any) => {
-        return a.username === "customer1" && a.password === "customer"
+        return a.username === enteredUsername && a.password === enteredPassword
       })
       if (user) {
         console.log("Signed in");
         this.router.navigateByUrl('/products');
-      }      
+      } else {
+        alert("Login failed");
+      }     
     })    
   }
 }

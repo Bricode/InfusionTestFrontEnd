@@ -10,9 +10,10 @@ export class LoginAuthenticatorService {
 
   constructor(private http: HttpClient) { }
   url = "http://localHost:3000/user";
-  params = new HttpParams().set('username', 'customer1').set('password','customer');
   
-  login() {
-    return this.http.get<any>(this.url, {params: this.params});      
+  
+  login(username: any , password: any) {
+    var params = new HttpParams().set('username', username).set('password',password);
+    return this.http.get<any>(this.url, {params: params});      
   }
 }
