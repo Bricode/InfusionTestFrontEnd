@@ -10,6 +10,7 @@ export class CheckoutComponent {
   cart: Cart = {
     customerId: 1,
     products: [{
+      id:1,
       sku: 1,
       name: 'test',
       description: 'test Description',

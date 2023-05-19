@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginAuthenticatorService } from './services/auth/login-authenticator.service';
+import { UserAuthenticatorService } from './services/auth/user-authenticator.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,20 +10,20 @@ import { Router } from '@angular/router';
 
 export class AppComponent {  
   title = 'infusionTestFrontEnd';
-  userIsSignedIn = this.loginAuthServ.isUserSignedIn()
+  userIsSignedIn = this.userAuthServ.isUserSignedIn()
   
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event.constructor.name === "NavigationEnd") {
-        this.userIsSignedIn = this.loginAuthServ.isUserSignedIn();
+        this.userIsSignedIn = this.userAuthServ.isUserSignedIn();
       }
     })
   }
-  constructor(private loginAuthServ: LoginAuthenticatorService, private router: Router) {    
+  constructor(private userAuthServ: UserAuthenticatorService, private router: Router) {    
     
   }  
   logOut() {
-    this.loginAuthServ.signOutUser();
+    this.userAuthServ.signOutUser();
     this.router.navigateByUrl('/sign-in');
   }
 }

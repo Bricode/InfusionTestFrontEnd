@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h2>Products</h2>
-    <div class="row">
+    <div class="row" *ngIf="!adminUser">
         <div *ngFor="let product of productsList" class="col-lg-3 col-md-12 mb-4 mb-lg-0">
             <div id="productBubble" class="card mb-3">
                 <div class="card-header"><h3>{{product.name}}</h3></div>
@@ -11,6 +11,11 @@
                     <button (click)="addToCart(product)">Add to Cart</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="" *ngIf="adminUser">
+        <div *ngFor="let product of productsList" class="list-group">
+            <div class="list-group-item" (click)="editProduct(product.id)"><p>{{product.name}}</p></div>                 
         </div>
     </div>
 </div>

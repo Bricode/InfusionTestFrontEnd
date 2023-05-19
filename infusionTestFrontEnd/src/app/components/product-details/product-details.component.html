@@ -1,1 +1,25 @@
-<p>product-details works!</p>
+
+<div *ngIf="displayForm" class="d-flex justify-content-center pt-2">    
+    <form [formGroup]="editProductForm" class="form" (ngSubmit)="onSubmit()">
+        <h3 class="row">Edit Product</h3>
+        <mdb-form-control class="row">
+            <label mdbLabel>SKU: </label>
+            <input mdbInput formControlName="sku" class=""> 
+        </mdb-form-control>
+        <mdb-form-control class="row">
+            <label mdbLabel>Name: </label>
+            <input mdbInput formControlName="name" class="">
+        </mdb-form-control>
+        <mdb-form-control class="row">
+            <label mdbLabel >Description: </label>
+            <input mdbInput  class="md-textarea" formControlName="description" class="">
+        </mdb-form-control>
+        <mdb-form-control class="row">
+            <label mdbLabel>Price: </label>
+            <input mdbInput formControlName="price" > 
+        </mdb-form-control>  
+           
+        <button type="submit" class="mt-2 row">Save Product Change</button>
+    </form>
+</div>
+<div *ngIf="!displayForm">Loading Product Details...</div>

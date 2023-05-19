@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginAuthenticatorService {
+export class UserAuthenticatorService {
     user: User = {} as User;
     constructor(private http: HttpClient) { }
     url = "http://localHost:3000/user";
@@ -23,6 +23,10 @@ export class LoginAuthenticatorService {
 
   setSignedInUser(user: User) {
     this.user = user;
+  }
+
+  isAdmin() {
+    return this.user.accountType == "admin"
   }
 
   signOutUser() {
