@@ -1,1 +1,17 @@
-<p>order-details works!</p>
+<div *ngIf="displayForm" class="d-flex justify-content-center pt-2">
+    <div>         
+        <div>
+            <h3>Customer Details: </h3>
+            <p>Customer Name: {{order.firstName}} {{order.lastName}}</p>
+            <p>Customer Email: {{order.email}}</p>
+        </div> 
+        <div><h3>Order Details:</h3></div>
+        <div>Order Id: {{order.id}} </div> 
+        <div>Products Ordered: </div>
+        <div *ngFor="let product of order.cart">
+            <div>SKU: {{product.sku}}</div>
+            <div>Name: {{product.name}}</div>        
+        </div>             
+    </div> 
+</div>
+<div *ngIf="!displayForm">Loading Order Details...</div>

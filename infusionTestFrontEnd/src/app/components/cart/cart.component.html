@@ -1,6 +1,7 @@
-<p>cart works!</p>
-<div class="cart-products" *ngFor="let product of products">
+<p>Confirming Order details</p>
+<div class="cart-products" *ngFor="let product of cart.products">
     {{product.name}}
+    
 </div>
 
-<a class="nav-link" href="/checkout"> checkout </a>
+<a class="nav-link" routerLink="/checkout"> Proceed To Checkout </a>

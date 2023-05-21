@@ -9,9 +9,9 @@
             <a class="nav-link" routerLink="/products">Products</a>
           </li>
           <li *ngIf="userIsSignedIn && userIsCustomer" class="nav-item ">
-            <a class="nav-link" routerLink="/cart">Cart</a>
+            <a class="nav-link" routerLink="/cart">Cart {{numberOfItems}}</a>
           </li>
-          <li *ngIf="userIsSignedIn && userIsCustomer" class="nav-item ">
+          <li *ngIf="userIsSignedIn && !userIsCustomer" class="nav-item ">
             <a class="nav-link" routerLink="/orders">Orders</a>
           </li>
           <li *ngIf="userIsSignedIn" class="nav-item" (click)="logOut()">

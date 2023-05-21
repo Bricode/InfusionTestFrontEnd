@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { UserAuthenticatorService } from './services/auth/user-authenticator.service';
 import { Router } from '@angular/router';
 
+import { CartService } from './services/cart/cart.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +14,7 @@ export class AppComponent {
   title = 'infusionTestFrontEnd';
   userIsSignedIn = this.userAuthServ.isUserSignedIn()
   userIsCustomer = !this.userAuthServ.isAdmin();
+  numberOfItems = this.cart.getCartItemCount();
 
   ngOnInit() {
     this.router.events.subscribe(event => {
@@ -21,8 +24,10 @@ export class AppComponent {
       }
     })
   }
-  constructor(private userAuthServ: UserAuthenticatorService, private router: Router) {    
-    
+  constructor(private userAuthServ: UserAuthenticatorService, private router: Router, private cart: CartService) {    
+    this.cart.addedToCart.subscribe(numberOfItems => {      
+      this.numberOfItems = this.cart.getCartItemCount();
+    })
   }  
   logOut() {
     this.userAuthServ.signOutUser();

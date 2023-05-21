@@ -8,16 +8,18 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminGuard } from './auth/admin.guard';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 const routes: Routes = [
   {path: 'sign-in', component: SignInComponent},
   {path: 'products', component: ProductsComponent,canActivate:[AuthGuard]},
-  {path: 'cart', component: CartComponent,canActivate:[AuthGuard]},
-  {path: 'orders', component: OrdersComponent,canActivate:[AuthGuard]},
+  {path: 'cart', component: CartComponent,canActivate:[AuthGuard]},  
   {path: 'checkout', component: CheckoutComponent,canActivate:[AuthGuard]},  
-  {path: 'editProduct/:id', component: ProductDetailsComponent}
+  {path: 'editProduct/:id', component: ProductDetailsComponent, canActivate:[AdminGuard]},
+  {path: 'orders', component: OrdersComponent,canActivate:[AdminGuard]},
+  {path: 'orderDetails/:id', component: OrderDetailsComponent, canActivate:[AdminGuard]}
 ];
-//, canActivate:[AdminGuard]
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

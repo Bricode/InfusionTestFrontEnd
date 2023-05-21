@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms'
 import { Router } from '@angular/router';
 import { UserAuthenticatorService } from 'src/app/services/auth/user-authenticator.service';
-import { User } from 'src/app/services/auth/user';
+import { User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-sign-in',

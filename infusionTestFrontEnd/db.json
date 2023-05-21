@@ -5,7 +5,7 @@
       "sku": 1,
       "name": "test",
       "description": "test Description",
-      "price": "19.98"
+      "price": "19.97"
     },
     {
       "id": 2,
@@ -41,6 +41,74 @@
       "username": "admin",
       "password": "admin",
       "accountType": "admin"
+    }
+  ],
+  "orders": [
+    {
+      "cart": [
+        {
+          "id": 1,
+          "sku": 1,
+          "name": "test",
+          "description": "test Description",
+          "price": "19.97"
+        },
+        {
+          "id": 2,
+          "sku": 2,
+          "name": "test 2",
+          "description": "test Description 2",
+          "price": 20.99
+        }
+      ],
+      "firstName": "test",
+      "lastName": "lname",
+      "email": "test@gmail.com",
+      "id": 1
+    },
+    {
+      "cart": [
+        {
+          "id": 3,
+          "name": "test 2",
+          "description": "test Description 2",
+          "price": 20.99,
+          "sku": 3
+        },
+        {
+          "id": 2,
+          "sku": 2,
+          "name": "test 2",
+          "description": "test Description 2",
+          "price": 20.99
+        }
+      ],
+      "firstName": "tester",
+      "lastName": "test",
+      "email": "test@gmail.com",
+      "id": 2
+    },
+    {
+      "cart": [
+        {
+          "id": 3,
+          "name": "test 2",
+          "description": "test Description 2",
+          "price": 20.99,
+          "sku": 3
+        },
+        {
+          "id": 1,
+          "sku": 1,
+          "name": "test",
+          "description": "test Description",
+          "price": "19.97"
+        }
+      ],
+      "firstName": "test",
+      "lastName": "test",
+      "email": "test",
+      "id": 3
     }
   ]
 }

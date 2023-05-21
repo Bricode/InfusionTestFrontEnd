@@ -15,7 +15,7 @@ export class AdminGuard implements CanActivate {
           return true;
         } else {
           this.router.navigateByUrl('/products');
-          alert("unauthorized to edit products");
+          alert("User unauthorized to view this page");
           return false;
         }
       } 

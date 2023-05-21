@@ -1,9 +1,7 @@
-<form>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <h3>Checkout</h3>
-    <div *ngFor="let product of cart.products">
-        {{product.sku}}
-    </div>
-    <input placeholder="First name">
-    <input placeholder="Last name">
-    <input placeholder="Email">
+    <input placeholder="First name" formControlName="firstName">
+    <input placeholder="Last name" formControlName="lastName">
+    <input placeholder="Email" formControlName="email">
+    <button type="submit">Submit Order</button>
 </form>
