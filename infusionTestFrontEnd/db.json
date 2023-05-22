@@ -33,13 +33,23 @@
     {
       "id": 1,
       "username": "customer1",
-      "password": "customer",
+      "hash": 
+        {
+            "salt": "e4fa4e5a3e403177",
+            "iv": "7bc0cbfd7d89e1601c2accb186ac849b",
+            "cipherText": "m5y3S/k9bdj6BSKfR2Uj8EuISZRxKuWTfTOOh4spOZI="
+        },
       "accountType": "customer"
     },
     {
       "id": 2,
       "username": "admin",
-      "password": "admin",
+      "hash": 
+        {
+            "salt": "591041c593347e1a",
+            "iv": "ec800d1eee0f36cb5cab2dd59ab4ff2d",
+            "cipherText": "vN0+2wKtAHygEGQBmiolNA=="
+        },
       "accountType": "admin"
     }
   ],

@@ -1,6 +1,11 @@
 export interface User {
     id: number,
     username: string,
-    password: string,    
+    hash: 
+        {
+            salt: string,
+            iv: string,
+            cipherText: string
+        },   
     accountType: string
 }
