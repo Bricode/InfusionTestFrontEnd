@@ -19,6 +19,9 @@ password=admin
 
 # Unit Tests
 Provide correct username, correct password. check that correct user account is signed into.
+
 Provide correct username, incorrect password. check that user isn't signed into.
+
 Provide incorrect username, correct password. check that user isn't signed into.
+
 Provide correct username, correct password for different user. check that user isn't signed into.
