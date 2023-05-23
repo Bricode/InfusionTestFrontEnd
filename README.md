@@ -9,6 +9,7 @@ In the second prompt, run the command "ng serve" to run the webapp.
 Navigate to `http://localhost:4200/`
 
 There are two accounts set up for this project.
+
 username=customer1
 password=customer
 
