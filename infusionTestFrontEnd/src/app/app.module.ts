@@ -27,7 +27,8 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule} from '@angular/forms'
+import { ReactiveFormsModule} from '@angular/forms';
+import { Error404Component } from './components/error404/error404.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReactiveFormsModule} from '@angular/forms'
     CheckoutComponent,
     CartComponent,
     OrdersComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

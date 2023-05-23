@@ -1,7 +1,20 @@
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-    <h3>Checkout</h3>
-    <input placeholder="First name" formControlName="firstName">
-    <input placeholder="Last name" formControlName="lastName">
-    <input placeholder="Email" formControlName="email">
-    <button type="submit">Submit Order</button>
-</form>
+<div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <h3 class="mt-4">Checkout</h3>
+            <div>
+                <label class="form-label">First Name: </label>
+                <input placeholder="First Name" formControlName="firstName" class="form-control">
+            </div>
+            <div>
+                <label class="form-label">Last Name: </label>
+                <input placeholder="Last Name" formControlName="lastName" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email: </label>
+                <input class="form-control" placeholder="Email" formControlName="email">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Order</button>
+        </form>
+    </div>
+</div>

@@ -16,6 +16,8 @@ export class ProductsComponent {
   productsService: ProductsService = inject(ProductsService);
   productsList: Product[] = [];
   adminUser = this.userAuth.isAdmin();
+  selectedProduct: Product = {} as Product;
+  showAlert: Boolean = false;
   @Output() productAddedToCart = new EventEmitter<number>();
 
   constructor(private cartService: CartService, private userAuth: UserAuthenticatorService, private router: Router) {
@@ -27,7 +29,11 @@ export class ProductsComponent {
   addToCart(product: Product) {
     this.productAddedToCart.emit();
     this.cartService.addToCart(product);
-    console.log(this.cartService.getCartProducts());
+    this.selectedProduct = product;
+    this.showAlert = true;
+    setTimeout( () => {
+      this.showAlert = false;
+    }, 2000);
   }
   editProduct(productId: number) {
     this.router.navigateByUrl('/editProduct/' + productId);

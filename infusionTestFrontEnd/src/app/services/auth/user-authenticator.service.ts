@@ -13,7 +13,7 @@ export class UserAuthenticatorService {
     url = "http://localHost:3000/user";
   
   
-  login(username: any , password: any) {    
+  login(username: any) {    
     var params = new HttpParams().set('username', username);
     return this.http.get<any>(this.url, {params: params});      
   }

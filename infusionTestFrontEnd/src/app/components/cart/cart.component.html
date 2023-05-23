@@ -1,7 +1,10 @@
-<p>Confirming Order details</p>
-<div class="cart-products" *ngFor="let product of cart.products">
-    {{product.name}}
-    
+<div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+    <h3>Cart:</h3>
+    <div class="cart-products list-group-item" *ngFor="let product of cart.products">
+        <div>{{product.name}}</div>
+        <div>{{product.price | currency:'NZD'}}</div>
+    </div>
+    <button class="nav-link btn btn-primary mt-2" routerLink="/checkout"> Proceed To Checkout </button>
+    </div>
 </div>
-
-<a class="nav-link" routerLink="/checkout"> Proceed To Checkout </a>

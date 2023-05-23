@@ -1,27 +1,23 @@
 # InfusionTestFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+This is the readme for a test front end I am completing for Infusion.
 
-## Development server
+This simulates a back end using json-server.
+In order to run it locally, open two cmd prompts in the projects saved location.
+After running NPM install to get the node packages it uses, run the command "json-server db.json". 
+In the second prompt, run the command "ng serve" to run the webapp.
+Navigate to `http://localhost:4200/`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+There are two accounts set up for this project.
+username=customer1
+password=customer
 
-## Code scaffolding
+username=admin
+password=admin
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Unit Tests
+Provide correct username, correct password. check that correct user account is signed into.
+Provide correct username, incorrect password. check that user isn't signed into.
+Provide incorrect username, correct password. check that user isn't signed into.
+Provide correct username, correct password for different user. check that user isn't signed into.

@@ -12,7 +12,6 @@ import * as CryptoJs from 'crypto-js';
 })
 export class SignInComponent {
   constructor(private userService: UserAuthenticatorService, private formBuilder: FormBuilder, private router: Router ) {
-
   }
 
   signInForm = this.formBuilder.group({
@@ -20,13 +19,11 @@ export class SignInComponent {
     password: ''
   });
 
-
   onSubmit(): void {
     var enteredUsername = this.signInForm.value.username;
     var enteredPassword = this.signInForm.value.password;
     
-
-    this.userService.login(enteredUsername, enteredPassword).subscribe(res =>{
+    this.userService.login(enteredUsername).subscribe(res =>{
       var success = false;    
       var iv  = CryptoJs.enc.Base64.parse("1234567890123456");  
       const user = res.find((a:any) => {      
